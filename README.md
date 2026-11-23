@@ -19,20 +19,10 @@ HERA-MOT uses motion, appearance, and track history to assign each admitted dete
 | DanceTrack | 5 | 52.20 | 51.78 | 84.68 |
 | DanceTrack | 10 | 46.07 | 44.31 | 76.90 |
 
-Download the [MOT17 validation checkpoint](https://github.com/SDaneil/HERA-MOT/releases/download/v0.1.0/mot17_sparse.pt) to `weights/mot17_sparse.pt` to run the `sparse_val` profile.
+Download the checkpoint for your dataset to `weights/` and use the `sparse_val` profile.
 
-### Standard-frame-rate test
-
-These are the test scores reported in the manuscript.
-
-| Dataset | HOTA | IDF1 | AssA | MOTA |
-| --- | ---: | ---: | ---: | ---: |
-| MOT17 | 65.5 | 81.4 | 65.9 | 80.9 |
-| MOT20 | 65.5 | 80.3 | 66.1 | 78.7 |
-| SportsMOT | 82.3 | 89.9 | 77.9 | 96.8 |
-| DanceTrack | 64.6 | 66.2 | 50.7 | 91.7 |
-
-
+- [MOT17 — `mot17_sparse.pt`](https://github.com/SDaneil/HERA-MOT/releases/download/v0.1.0/mot17_sparse.pt)
+- [DanceTrack — `dancetrack_sparse.pt`](https://github.com/SDaneil/HERA-MOT/releases/download/v0.1.0/dancetrack_sparse.pt)
 
 ## Installation
 
