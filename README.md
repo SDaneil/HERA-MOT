@@ -32,7 +32,7 @@ These are the test scores reported in the manuscript.
 | SportsMOT | 82.3 | 89.9 | 77.9 | 96.8 |
 | DanceTrack | 64.6 | 66.2 | 50.7 | 91.7 |
 
-The archived MOT17 submission reporting 65.5 used linear interpolation and Gaussian smoothing. The `online_test` profile writes raw MOT17 tracks.
+
 
 ## Installation
 
