@@ -1,0 +1,20 @@
+{
+  "dataset": "MOT20",
+  "default_profile": "online_test",
+  "profiles": {
+    "online_test": {
+      "split": "test",
+      "stride": 1,
+      "allowed_strides": [1],
+      "gate": "native",
+      "admission_threshold": 0.3,
+      "new_track_threshold": 0.6246494191492591,
+      "short_gap": 3,
+      "keep_gap": 40,
+      "trust_floor": 0.1014392537025336,
+      "camera_motion": "ecc",
+      "checkpoint": "weights/mot20_online.pt",
+      "description": "Raw online test profile at the original frame rate using native association and the ControlReplay checkpoint. Scores from offline trajectory processing refer to a separate output protocol."
+    }
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "dataset": "MOT17",
+  "default_profile": "online_test",
+  "profiles": {
+    "online_test": {
+      "split": "test",
+      "stride": 1,
+      "allowed_strides": [1],
+      "gate": "native",
+      "admission_threshold": 0.1014392537025336,
+      "new_track_threshold": 0.6246494191492591,
+      "short_gap": 3,
+      "keep_gap": 40,
+      "trust_floor": 0.1014392537025336,
+      "camera_motion": "ecc",
+      "checkpoint": "weights/mot17_online.pt",
+      "description": "Raw online test profile at the original frame rate using native association and the Blend50 checkpoint. Scores from offline trajectory processing refer to a separate output protocol."
+    },
+    "sparse_val": {
+      "split": "val",
+      "stride": 2,
+      "allowed_strides": [1, 2, 5, 10],
+      "gate": "appearance",
+      "admission_threshold": 0.1014392537025336,
+      "new_track_threshold": 0.6246494191492591,
+      "short_gap": 3,
+      "keep_gap": 40,
+      "trust_floor": 0.1014392537025336,
+      "camera_motion": "ecc",
+      "checkpoint": "weights/mot17_sparse.pt",
+      "validation_partition": "Use the second half of each FRCNN training sequence (original frames floor(N / 2) + 1 through N, where N is the sequence length). Start stride sampling at the first frame of that half.",
+      "description": "Sparse validation profile using the shared Full checkpoint and the appearance-expanded gate. Stride 1 is also available for component comparisons."
+    }
+  }
+}

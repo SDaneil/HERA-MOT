@@ -1,0 +1,26 @@
+{
+  "dataset": "SportsMOT",
+  "default_profile": "online_test",
+  "profiles": {
+    "online_test": {
+      "split": "test",
+      "stride": 1,
+      "allowed_strides": [1],
+      "gate": "appearance",
+      "admission_threshold": 0.65,
+      "new_track_threshold": 0.6246494191492591,
+      "short_gap": 3,
+      "keep_gap": 256,
+      "trust_floor": 0.1014392537025336,
+      "camera_motion": "ecc",
+      "checkpoint": "weights/sportsmot_online.pt",
+      "description": "Original-rate tracking with the OriginalLR90 checkpoint and reciprocal appearance gate."
+    }
+  },
+  "archived_test": {
+    "variant": "GAL90_raw",
+    "stride": 1,
+    "raw_output": true,
+    "description": "The archived benchmark system adds OLD assignment protection and candidate expansion from the latest primary appearance and a fixed primary appearance gallery. It uses a SportsMOT-specific YOLOX-X detector and two trained LMBN encoders."
+  }
+}

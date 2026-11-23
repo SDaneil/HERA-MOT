@@ -1,0 +1,40 @@
+{
+  "dataset": "DanceTrack",
+  "default_profile": "sparse_val",
+  "profiles": {
+    "sparse_val": {
+      "split": "val",
+      "stride": 1,
+      "allowed_strides": [1, 2, 5, 10],
+      "gate": "appearance_native",
+      "admission_threshold": 0.1014392537025336,
+      "new_track_threshold": 0.6246494191492591,
+      "short_gap": 3,
+      "keep_gap": 40,
+      "trust_floor": 0.1014392537025336,
+      "camera_motion": "ecc",
+      "checkpoint": "weights/dancetrack_sparse.pt",
+      "description": "DanceTrack validation with reciprocal appearance and native-gain candidate gates."
+    },
+    "online_test": {
+      "split": "test",
+      "stride": 1,
+      "allowed_strides": [1],
+      "gate": "appearance_native",
+      "admission_threshold": 0.1014392537025336,
+      "new_track_threshold": 0.6246494191492591,
+      "short_gap": 3,
+      "keep_gap": 40,
+      "trust_floor": 0.1014392537025336,
+      "camera_motion": "ecc",
+      "checkpoint": "weights/dancetrack_online.pt",
+      "description": "Original-rate shared-core reference using the frozen Full association base. The archived test system also uses TWiX motion affinity."
+    }
+  },
+  "archived_test": {
+    "variant": "final65_twix_raw",
+    "stride": 1,
+    "raw_output": true,
+    "description": "The archived benchmark system adapts a 64-coefficient TWiX input for legal OLD actions, using a DanceTrack-trained YOLOX-X detector and two trained LMBN encoders."
+  }
+}
